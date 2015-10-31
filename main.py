@@ -44,5 +44,5 @@ def Scroll(speed):
     GPIO.output(17,True)
     GPIO.output(18,True)
     
-    
+Scroll(speed)    
         
