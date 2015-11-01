@@ -52,9 +52,8 @@ def drawNumber(digit1,digit2,digit3,digit4):
 
 def RandomDisplay(speed):
     i = 0
-    while i < 100:
-        drawNumber(random.random()*2,random.random()*2,random.random()*2,random.random()*2)
-        
+    while i < 100:   
+        drawNumber(int(random.random()*2),int(random.random()*2),int(random.random()*2),int(random.random()*2))
         i+=1
         
     
