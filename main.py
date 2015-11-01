@@ -80,11 +80,10 @@ def Scroll(speed):
 
 
 
-
-drawNumber(0,0,0,0)
 drawNumber(0,0,0,1)
-
-
+drawNumber(0,0,1,0)
+drawNumber(0,1,0,0)
+drawNumber(1,0,0,0)
 
     
     
