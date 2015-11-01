@@ -23,10 +23,19 @@ def Blink(numTimes,speed):
 ## Ask user for total number of blinks and length of each blink
 #iterations = input("Enter total number of times to blink: ")
 
-speed = input("Enter length of each blink(seconds): ")
+speed = input("Enter length of delay: ")
 
 ## Start Blink() function. Convert user input from strings to numeric data types and pass to Blink() as parameters
 #Blink(int(iterations),float(speed))
+
+def RandomDisplay(speed):
+    i = 0
+    while i < 100:
+        print(int(random()*2))
+        time.sleep(speed)
+        i+=1
+        
+    
 
 
 def Scroll(speed):
@@ -71,19 +80,9 @@ def drawNumber(digit1,digit2,digit3,digit4):
 
     time.sleep(speed)
 
-drawNumber(0,0,0,0) ## 6
-drawNumber(0,1,1,1)## 7
-drawNumber(1,1,0,0) ## 9
-#drawNumber(1,0,0,0) ## nothing
-#drawNumber(1,1,1,0) ##
-#drawNumber(1,1,1,1)
-#drawNumber(0,1,0,0)
-#drawNumber(0,0,1,1)
-drawNumber(1,0,1,0)
-drawNumber(0,0,1,1)
-drawNumber(0,0,0,1)
-drawNumber(1,0,0,1)
-drawNumber(1,1,0,1)
+RandomDisplay(speed)
+
+
 
     
     
