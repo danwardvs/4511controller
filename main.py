@@ -28,11 +28,33 @@ speed = input("Enter length of delay: ")
 ## Start Blink() function. Convert user input from strings to numeric data types and pass to Blink() as parameters
 #Blink(int(iterations),float(speed))
 
+def drawNumber(digit1,digit2,digit3,digit4):
+    
+    GPIO.output(17,False)
+    GPIO.output(18,False)
+    GPIO.output(19,False)
+    GPIO.output(20,False)
+    
+    if digit1 == 1:
+        GPIO.output(17,True)
+        
+    if digit2 == 1:
+        GPIO.output(18,True)
+        
+    if digit3 == 1:
+        GPIO.output(19,True)
+        
+    if digit4 == 1:
+        GPIO.output(20,True)
+
+    time.sleep(speed)
+
+
 def RandomDisplay(speed):
     i = 0
     while i < 100:
-        print(int(random.random()*2))
-        time.sleep(speed)
+        drawNumber(random.random()*2,random.random()*2,random.random()*2,random.random()*2)
+        
         i+=1
         
     
@@ -59,26 +81,7 @@ def Scroll(speed):
 
 
 
-def drawNumber(digit1,digit2,digit3,digit4):
-    
-    GPIO.output(17,False)
-    GPIO.output(18,False)
-    GPIO.output(19,False)
-    GPIO.output(20,False)
-    
-    if digit1 == 1:
-        GPIO.output(17,True)
-        
-    if digit2 == 1:
-        GPIO.output(18,True)
-        
-    if digit3 == 1:
-        GPIO.output(19,True)
-        
-    if digit4 == 1:
-        GPIO.output(20,True)
 
-    time.sleep(speed)
 
 RandomDisplay(speed)
 
