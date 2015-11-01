@@ -60,13 +60,13 @@ def drawNumber(digit1,digit2,digit3,digit4):
     if digit1 == 1:
         GPIO.output(17,True)
         
-    if digit1 == 2:
+    if digit2 == 1:
         GPIO.output(18,True)
         
-    if digit1 == 3:
+    if digit3 == 1:
         GPIO.output(19,True)
         
-    if digit1 == 4:
+    if digit4 == 1:
         GPIO.output(20,True)
 
     time.sleep(speed)
