@@ -72,14 +72,18 @@ def drawNumber(digit1,digit2,digit3,digit4):
     time.sleep(speed)
 
 drawNumber(0,0,0,0) ## 6
-drawNumber(1,0,0,0) ## nothing
+drawNumber(0,1,1,1)## 7
 drawNumber(1,1,0,0) ## 9
-drawNumber(1,1,1,0) ##
-drawNumber(1,1,1,1)
-drawNumber(0,1,0,0)
-drawNumber(0,1,1,1)
+#drawNumber(1,0,0,0) ## nothing
+#drawNumber(1,1,1,0) ##
+#drawNumber(1,1,1,1)
+#drawNumber(0,1,0,0)
+#drawNumber(0,0,1,1)
+drawNumber(1,0,1,0)
 drawNumber(0,0,1,1)
-
+drawNumber(0,0,0,1)
+drawNumber(1,0,0,1)
+drawNumber(1,1,0,1)
 
     
     
