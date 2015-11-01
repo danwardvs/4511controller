@@ -52,7 +52,7 @@ def drawNumber(digit1,digit2,digit3,digit4):
 
 def RandomDisplay(speed):
     i = 0
-    while i < 100:   
+    while i < 100:
         drawNumber(int(random.random()*2),int(random.random()*2),int(random.random()*2),int(random.random()*2))
         i+=1
         
@@ -81,8 +81,8 @@ def Scroll(speed):
 
 
 
-
-RandomDisplay(speed)
+drawNumber(0,0,0,0)
+drawNumber(0,0,0,1)
 
 
 
