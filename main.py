@@ -6,7 +6,8 @@ import time ## Import 'time' library. Allows us to use 'sleep'
 GPIO.setmode(GPIO.BCM) ## Use board pin numbering
 GPIO.setup(17, GPIO.OUT) 
 GPIO.setup(18, GPIO.OUT) 
-
+GPIO.setup(19, GPIO.OUT) 
+GPIO.setup(20, GPIO.OUT) 
 
 ##Define a function named Blink()
 def Blink(numTimes,speed):
@@ -21,6 +22,7 @@ def Blink(numTimes,speed):
 
 ## Ask user for total number of blinks and length of each blink
 #iterations = input("Enter total number of times to blink: ")
+
 speed = input("Enter length of each blink(seconds): ")
 
 ## Start Blink() function. Convert user input from strings to numeric data types and pass to Blink() as parameters
@@ -31,9 +33,11 @@ def Scroll(speed):
     
     GPIO.output(17,False)
     GPIO.output(18,False)
+    GPIO.output(19,False)
+    GPIO.output(20,False)
 
     time.sleep(speed)
-    GPIO.output(17,True)
+    
     GPIO.output(18,False)
 
     time.sleep(speed)
@@ -43,6 +47,35 @@ def Scroll(speed):
     time.sleep(speed)
     GPIO.output(17,True)
     GPIO.output(18,True)
+
+
+
+def drawNumber(digit1,digit2,digit3,digit4):
     
-Scroll(speed)    
+    GPIO.output(17,False)
+    GPIO.output(18,False)
+    GPIO.output(19,False)
+    GPIO.output(20,False)
+    
+    if digit1 == 1:
+        GPIO.output(17,True)
+        
+    if digit1 == 2:
+        GPIO.output(18,True)
+        
+    if digit1 == 3:
+        GPIO.output(19,True)
+        
+    if digit1 == 4:
+        GPIO.output(20,True)
+
+    time.sleep(speed)
+
+drawNumber(0,0,0,0)
+drawNumber(1,0,0,0)
+drawNumber(1,1,0,0)
+
+    
+    
+ 
         
