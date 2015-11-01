@@ -1,6 +1,6 @@
 import RPi.GPIO as GPIO ## Import GPIO library
 import time ## Import 'time' library. Allows us to use 'sleep'
-
+import random
 
 
 GPIO.setmode(GPIO.BCM) ## Use board pin numbering
@@ -31,7 +31,7 @@ speed = input("Enter length of delay: ")
 def RandomDisplay(speed):
     i = 0
     while i < 100:
-        print(int(random()*2))
+        print(int(random.random()*2))
         time.sleep(speed)
         i+=1
         
